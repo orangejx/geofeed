@@ -1,3 +1,5 @@
-/geofeed.csv /geofeed.csv 200
-/config.json /config.json 200
-/* /geofeed.csv 200
+# 特定路径保持原样（由 Functions 处理，这里仅作说明）
+# / - 首页（服务端渲染）
+# /geofeed.csv - GeoFeed 数据
+# /config.json - 配置文件
+# /assets/* - 静态资源

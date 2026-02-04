@@ -6,10 +6,11 @@
 /config.json
   Cache-Control: public, max-age=3600
 
-# GeoFeed 数据短期缓存
+# GeoFeed 数据短期缓存，触发下载
 /geofeed.csv
   Cache-Control: public, max-age=3600
   Content-Type: text/csv; charset=utf-8
+  Content-Disposition: attachment; filename="geofeed.csv"
 
 # HTML 页面短期缓存
 /index.html
