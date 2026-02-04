@@ -1,0 +1,21 @@
+{
+  "owner": {
+    "name": "Aldrich J. Xing",
+    "email": "aldrichx@wlms.dev",
+    "website": "https://wlms.dev"
+  },
+  "asn": {
+    "number": "AS214242",
+    "name": "Aldrich J. Xing",
+    "description": "个人实验性网络，用于学习和研究互联网路由、BGP 协议及网络地理位置信息发布"
+  },
+  "geofeed": {
+    "url": "/geofeed.csv",
+    "updateFrequency": "Daily",
+    "lastUpdate": "2026-02-04"
+  },
+  "links": {
+    "github": "https://github.com/orangejx/geofeed",
+    "peeringdb": "https://www.peeringdb.com/asn/214242"
+  }
+}
