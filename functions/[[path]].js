@@ -115,11 +115,11 @@ export async function onRequest(context) {
     '/assets/',
   ];
   
-  // 检查是否是允许的路径
+  // 检查是否是允许的路径，直接透传给静态资源
   if (allowedPaths.includes(path) || allowedPrefixes.some(prefix => path.startsWith(prefix))) {
-    return context.env.ASSETS.fetch(context.request);
+    return context.next();
   }
   
-  // 其他所有路径重定向到 geofeed.csv
-  return context.env.ASSETS.fetch(new URL('/geofeed.csv', context.request.url));
+  // 其他所有路径重定向到首页
+  return Response.redirect(new URL('/', context.request.url), 302);
 }
