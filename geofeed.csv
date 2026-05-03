@@ -20,9 +20,10 @@
 # 
 # 2a0f:6284:4900::/40 Block start
 2a0f:6284:4901::/48,DE,DE-BY,Nürnberg,
-2a0f:6284:4902::/48,GB,GB-LND,London,
-2a0f:6284:4903::/48,GB,GB-CAM,Cambridge,
-2a0f:6284:4904::/48,GB,GB-TWH,Sunderland,
+2a0f:6284:4902::/48,DE,DE-HE,Frankfurt,
+2a0f:6284:4903::/48,GB,GB-LND,London,
+2a0f:6284:4904::/48,GB,GB-CAM,Cambridge,
+2a0f:6284:4905::/48,GB,GB-TWH,Sunderland,
 # 2a0f:6284:4900::/40 Block End
 # 
 # 
@@ -277,7 +278,7 @@
 2a0c:9a46:3f7::/48,ZA,ZA-GP,Johannesburg,
 2a0c:9a46:3f8::/48,ZM,ZM-09,Lusaka,
 2a0c:9a46:3f9::/48,ZW,ZW-HA,Harare,
-2a0c:9a46:3fa::/48,EU,,,
+2a0c:9a46:3fa::/48,GB,GB-TWH,Sunderland,
 # 2a0c:9a46:0300::/40 Block End 
 # 
 # 
@@ -532,10 +533,7 @@
 2a0a:6044:77f7::/48,ZA,ZA-GP,Johannesburg,
 2a0a:6044:77f8::/48,ZM,ZM-09,Lusaka,
 2a0a:6044:77f9::/48,ZW,ZW-HA,Harare,
-2a0a:6044:77fa::/48,EU
-2a0a:6044:77fb::/48,DE,DE-HE,Frankfurt,
-2a0a:6044:77fc::/48,GB,GB-LND,London,
-2a0a:6044:77fd::/48,GB,GB-LND,London,
+2a0a:6044:77fa::/48,GB,GB-TWH,Sunderland,
 # 2a0a:6044:7700::/40 Block End 
 # 
 # Anycast Block 
@@ -788,7 +786,7 @@
 2a0c:9a46:3fe:f6::/64,ZA,ZA-GP,Johannesburg,
 2a0c:9a46:3fe:f7::/64,ZM,ZM-09,Lusaka,
 2a0c:9a46:3fe:f8::/64,ZW,ZW-HA,Harare,
-2a0c:9a46:3fe:f9::/64,EU,,,
+2a0c:9a46:3fe:f9::/64,GB,GB-TWH,Sunderland,
 2a0a:6044:77fe::/64,AD,AD-07,Andorra la Vella,
 2a0a:6044:77fe:1::/64,AE,AE-AZ,Abu Dhabi,
 2a0a:6044:77fe:2::/64,AF,AF-KAB,Kabul,
@@ -1038,7 +1036,7 @@
 2a0a:6044:77fe:f6::/64,ZA,ZA-GP,Johannesburg,
 2a0a:6044:77fe:f7::/64,ZM,ZM-09,Lusaka,
 2a0a:6044:77fe:f8::/64,ZW,ZW-HA,Harare,
-2a0a:6044:77fe:f9::/64,EU,,,
+2a0a:6044:77fe:f9::/64,GB,GB-TWH,Sunderland,
 # End of Anycast Block 
 # Done
 # 
