@@ -6,6 +6,27 @@
 # Format: IP Prefix, Country Code, Region, City, Postal Code
 # Example: 192.0.2.0/24,US,CA,Los Angeles,90001
 # 
+# 
+# 
+# 2a0e:8f02:2290::/44 Block start
+2a0e:8f02:2291::/48,DE,DE-BY,Nürnberg,
+2a0e:8f02:2292::/48,GB,GB-LND,London,
+2a0e:8f02:229c::/48,US,US-NJ,Newark,
+2a0e:8f02:229d::/48,LU,LU-LU,Luxembourg,
+2a0e:8f02:229e::/48,DE,DE-HE,Frankfurt,
+# 2a0e:8f02:2290::/44 Block End
+# 
+# 
+# 
+# 2a0f:6284:4900::/40 Block start
+2a0f:6284:4901::/48,DE,DE-BY,Nürnberg,
+2a0f:6284:4902::/48,GB,GB-LND,London,
+2a0f:6284:4903::/48,GB,GB-CAM,Cambridge,
+2a0f:6284:4904::/48,GB,GB-TWH,Sunderland,
+# 2a0f:6284:4900::/40 Block End
+# 
+# 
+# 
 # 2a0c:9a46:0300::/40 Block start 
 2a0c:9a46:301::/48,AD,AD-07,Andorra la Vella,
 2a0c:9a46:302::/48,AE,AE-AZ,Abu Dhabi,
