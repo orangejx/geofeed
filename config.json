@@ -12,7 +12,7 @@
   "geofeed": {
     "url": "/geofeed.csv",
     "updateFrequency": "Daily",
-    "lastUpdate": "2026-02-04"
+    "lastUpdate": "2026-05-23"
   },
   "links": {
     "github": "https://github.com/orangejx/geofeed",
