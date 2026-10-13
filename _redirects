@@ -1,5 +1,1 @@
-# 特定路径保持原样（由 Functions 处理，这里仅作说明）
-# / - 首页（服务端渲染）
-# /geofeed.csv - GeoFeed 数据
-# /config.json - 配置文件
-# /assets/* - 静态资源
+# Language URLs are rendered by the Pages Function; no static rewrites are needed.

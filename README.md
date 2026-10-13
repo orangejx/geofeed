@@ -1,82 +1,30 @@
-# Geofeed Cloudflare Pages
+# AS214242 GeoFeed
 
-一个简单的 Cloudflare Pages 项目，提供 geofeed.csv 文件访问。
+A Cloudflare Pages site for the [RFC 8805](https://datatracker.ietf.org/doc/html/rfc8805) GeoFeed of AS214242. The CSV is available at [`/geofeed.csv`](https://geofeed.wlms.dev/geofeed.csv).
 
-## 作者
+## Deploy to Cloudflare Pages
 
-Aldrich J. Xing
-- Email: aldrichx@wlms.dev
-- Website: https://wlms.dev
+Connect this repository to a Pages project. Use **None** for the framework preset, leave the build command empty, and set the output directory to the repository root (`.`). There is no build command or additional Worker to configure: Pages automatically deploys `functions/[[path]].js` alongside the static files.
 
-## 功能
+Pages serves `/`, `/index.html`, `/assets/*`, `/config.json`, and `/geofeed.csv` as static assets. Direct visits to the six language URLs invoke the Pages Function to return translated HTML on the first response; these requests count toward Pages Functions usage. Trailing-slash language URLs redirect to their canonical slashless URL (HTTP 308) through the same Function. `_routes.json` keeps static resources out of Functions. The Function returns 404 for other unmatched paths.
 
-- 提供静态 geofeed.csv 文件
-- 服务端渲染（SSR）优化 SEO
-- 美观的首页展示 GeoFeed 信息
-- 通过 config.json 配置站点信息
-- 完整的 SEO meta 标签和结构化数据
-- 所有未定义路径都重定向到 geofeed.csv
+## Languages
 
-## 部署
+Supported URLs: `/en-GB`, `/zh-cn`, `/de-DE`, `/fr-FR`, `/it-IT`, `/es-ES`. The root URL uses the browser's preferred supported language, falling back to `en-GB`. Direct visits receive fully translated HTML from the Pages Function, including localized metadata, even without JavaScript. The language menu switches using translations already fetched from `/assets/locales.json` and updates the URL with the History API: no navigation, server-side render, or new translation request. Back and forward navigation updates the language as well. The root URL has an English HTML fallback if JSON cannot be loaded; a server-rendered language URL keeps its translated HTML if the browser cannot fetch JSON.
 
-本项目是纯静态站点，无需编译构建。
+Edit `assets/locales.json` to change translated interface copy. Keep the same keys in all six languages. Update `config.json` for factual data (owner, ASN, CSV URL, update date, weekly update frequency, and external links). The page loads both JSON files at startup. English text in `index.html` is the static root template and should be kept in sync with `en-GB`.
 
-### 部署到 Cloudflare Pages
+The theme menu offers **Follow**, **Light**, and **Dark**. Follow is the default: it uses the operating system’s colour preference when available. On browsers without system theme support, it uses local time (light from 07:00 to 18:59; dark otherwise). Choices are saved in browser local storage when available. Theme and language switches are entirely client-side.
 
-1. 将此仓库推送到 GitHub：
-   ```bash
-   git remote add origin https://github.com/orangejx/geofeed.git
-   git branch -M main
-   git push -u origin main
-   ```
+`_headers` controls static cache policies. Avoid immutable caching of unversioned files so content updates reach visitors.
 
-2. 登录 [Cloudflare Dashboard](https://dash.cloudflare.com/)
+## Files
 
-3. 进入 Pages 页面，点击 "Create a project"
+- `geofeed.csv` — published GeoFeed
+- `index.html`, `assets/style.css`, `assets/script.js` — static website
+- `assets/locales.json` — six translations
+- `config.json` — site facts and links
+- `_routes.json`, `_headers` — Pages routing and cache configuration
+- `functions/[[path]].js` — first-request language rendering and unmatched-request fallback
 
-4. 连接 GitHub 仓库并选择 `orangejx/geofeed`
-
-5. 配置构建设置：
-   - **Framework preset**: None
-   - **Build command**: 留空（无需构建）
-   - **Build output directory**: `/`（根目录）
-   - **Root directory**: `/`（根目录）
-
-6. 点击 "Save and Deploy"
-
-7. 部署完成后，Cloudflare Pages 会自动：
-   - 识别 `functions/` 目录并启用服务端渲染
-   - 应用 `_headers` 文件中的缓存策略
-   - 应用 `_redirects` 文件中的重定向规则
-
-### 自定义域名（可选）
-
-在 Cloudflare Pages 项目设置中，可以添加自定义域名（如 `geofeed.wlms.dev`）。
-
-### 更新部署
-
-每次推送到 `main` 分支，Cloudflare Pages 会自动重新部署。无需手动操作。
-
-## 配置
-
-编辑 `config.json` 文件来自定义站点信息：
-
-- `owner` - 所有者信息（姓名、邮箱、网站）
-- `asn` - ASN 相关信息
-- `geofeed` - GeoFeed 数据配置
-- `links` - 相关链接（GitHub、PeeringDB 等）
-
-## 文件说明
-
-- `index.html` - 静态首页模板
-- `assets/style.css` - 样式文件（长期缓存）
-- `assets/script.js` - 脚本文件（长期缓存）
-- `functions/index.js` - Cloudflare Pages Function，实现服务端渲染
-- `geofeed.csv` - 主要的 geofeed 数据文件
-- `config.json` - 站点配置文件
-- `_redirects` - Cloudflare Pages 重定向规则
-- `_headers` - HTTP 响应头配置，优化缓存策略
-
-## 开源协议
-
-本项目采用 MIT License 开源协议。允许修改和商用，但必须保留版权声明和许可声明。
+Licensed under MIT; see [LICENSE](LICENSE).

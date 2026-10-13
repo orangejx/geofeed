@@ -11,7 +11,7 @@
   },
   "geofeed": {
     "url": "/geofeed.csv",
-    "updateFrequency": "Daily",
+    "updateFrequency": "Weekly",
     "lastUpdate": "2026-05-23"
   },
   "links": {
