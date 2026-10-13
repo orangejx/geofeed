@@ -1,17 +1,13 @@
-# 静态资源长期缓存
+/index.html
+  Cache-Control: public, max-age=300, must-revalidate
+
 /assets/*
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=300, must-revalidate
 
-# 配置文件短期缓存
 /config.json
-  Cache-Control: public, max-age=3600
+  Cache-Control: public, max-age=300, must-revalidate
 
-# GeoFeed 数据短期缓存，触发下载
 /geofeed.csv
   Cache-Control: public, max-age=3600
   Content-Type: text/csv; charset=utf-8
   Content-Disposition: attachment; filename="geofeed.csv"
-
-# HTML 页面短期缓存
-/index.html
-  Cache-Control: public, max-age=3600
