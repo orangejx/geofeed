@@ -1,6 +1,6 @@
 # AS214242 GeoFeed
 
-A Cloudflare Pages site for the [RFC 8805](https://datatracker.ietf.org/doc/html/rfc8805) GeoFeed of AS214242. The CSV is available at [`/geofeed.csv`](https://geofeed.wlms.dev/geofeed.csv).
+A Cloudflare Pages site for the [RFC 8805](https://datatracker.ietf.org/doc/html/rfc8805) GeoFeed of AS214242. The CSV is available at [`/geofeed.csv`](https://geofeed.aldrichx.uk/geofeed.csv).
 
 ## Deploy to Cloudflare Pages
 
