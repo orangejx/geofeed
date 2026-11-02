@@ -11,6 +11,7 @@
 # 2a0e:8f02:2290::/44 Block start
 2a0e:8f02:2291::/48,DE,DE-BY,Nürnberg,
 2a0e:8f02:2292::/48,GB,GB-LND,London,
+2a0e:8f02:2293::/48,GB,GB-WLV,Wolverhampton,WV11LY
 2a0e:8f02:229c::/48,US,US-NJ,Newark,
 2a0e:8f02:229d::/48,LU,LU-LU,Luxembourg,
 2a0e:8f02:229e::/48,DE,DE-HE,Frankfurt,
@@ -24,6 +25,7 @@
 2a0f:6284:4903::/48,GB,GB-LND,London,
 2a0f:6284:4904::/48,GB,GB-CAM,Cambridge,
 2a0f:6284:4905::/48,GB,GB-TWH,Sunderland,
+2a0f:6284:4906::/48,GB,GB-WLV,Wolverhampton,WV11LY
 # 2a0f:6284:4900::/40 Block End
 # 
 # 
